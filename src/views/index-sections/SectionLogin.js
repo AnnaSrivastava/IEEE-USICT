@@ -1,38 +1,22 @@
-/*!
 
-=========================================================
-* Paper Kit React - v1.0.0
-=========================================================
-
-* Product Page: https://www.creative-tim.com/product/paper-kit-react
-
-* Copyright 2019 Creative Tim (https://www.creative-tim.com)
-* Licensed under MIT (https://github.com/creativetimofficial/paper-kit-react/blob/master/LICENSE.md)
-
-* Coded by Creative Tim
-
-=========================================================
-
-* The above copyright notice and this permission notice shall be included in all copies or substantial portions of the Software.
-
-*/
 import React from "react";
 
 // reactstrap components
 import {
-  Button,
-  Card,
-  Form,
-  Input,
-  InputGroupAddon,
-  InputGroupText,
-  InputGroup,
+  //Button,
+  // Card,
+  // Form,
+  //Input,
+ // InputGroupAddon,
+  //InputGroupText,
+  //InputGroup,
   Container,
   Row,
   Col
 } from "reactstrap";
-
+import "tachyons";
 // core components
+import Flippy, { FrontSide, BackSide } from 'react-flippy';
 
 function SectionLogin() {
   return (
@@ -43,91 +27,54 @@ function SectionLogin() {
           backgroundImage: "url(" + require("assets/img/login-image.jpg") + ")"
         }}
       >
-        <Container>
+       <Container>
           <Row>
-            <Col className="mx-auto" lg="4" md="6">
-              <Card className="card-register">
-                <h3 className="title mx-auto">Welcome</h3>
-                <div className="social-line text-center">
-                  <Button
-                    className="btn-neutral btn-just-icon mt-0"
-                    color="facebook"
-                    href="#pablo"
-                    onClick={e => e.preventDefault()}
-                  >
-                    <i className="fa fa-facebook-square" />
-                  </Button>
-                  <Button
-                    className="btn-neutral btn-just-icon mt-0 ml-1"
-                    color="google"
-                    href="#pablo"
-                    onClick={e => e.preventDefault()}
-                  >
-                    <i className="fa fa-google-plus" />
-                  </Button>
-                  <Button
-                    className="btn-neutral btn-just-icon mt-0 ml-1"
-                    color="twitter"
-                    href="#pablo"
-                    onClick={e => e.preventDefault()}
-                  >
-                    <i className="fa fa-twitter" />
-                  </Button>
-                </div>
-                <Form className="register-form">
-                  <label>Email</label>
-                  <InputGroup className="form-group-no-border">
-                    <InputGroupAddon addonType="prepend">
-                      <InputGroupText>
-                        <i className="nc-icon nc-email-85" />
-                      </InputGroupText>
-                    </InputGroupAddon>
-                    <Input placeholder="Email" type="email" />
-                  </InputGroup>
-                  <label>Password</label>
-                  <InputGroup className="form-group-no-border">
-                    <InputGroupAddon addonType="prepend">
-                      <InputGroupText>
-                        <i className="nc-icon nc-key-25" />
-                      </InputGroupText>
-                    </InputGroupAddon>
-                    <Input placeholder="Password" type="password" />
-                  </InputGroup>
-                  <Button
-                    block
-                    className="btn-round"
-                    color="danger"
-                    type="button"
-                  >
-                    Register
-                  </Button>
-                </Form>
-                <div className="forgot">
-                  <Button
-                    className="btn-link"
-                    color="danger"
-                    href="#pablo"
-                    onClick={e => e.preventDefault()}
-                  >
-                    Forgot password?
-                  </Button>
-                </div>
-              </Card>
-              <div className="col text-center">
-                <Button
-                  className="btn-round"
-                  outline
-                  color="neutral"
-                  href="/register-page"
-                  size="lg"
-                  target="_blank"
-                >
-                  View Register Page
-                </Button>
-              </div>
+            <Col className="ml-auto mr-auto" lg="4">
+              <Flippy
+                  flipOnClick={true} 
+                  flipOnHover={false}// default false
+                  flipDirection="horizontal" // horizontal or vertical
+                  style={{ width: '350px', height: '450px' }} >
+    <FrontSide
+      style={{
+        backgroundColor: '#f5593d',
+      }}
+      className="card ml-auto mr-auto"
+    >      <div className="social-line">
+
+      <strong><h4 className="title tc mx-auto">Industrial Visit</h4></strong>
+      <img 
+        src={require("assets/img/3447ac3e-d56e-45e9-8a3a-ccbd5305d3b7.jpg")}
+        alt="..."></img>
+        <p className="tl white">IEEE USICT conducted an Industrial Visit to
+   Network Bulls, Gurugram on 12 February 2020 for the students of USICT.
+The event initiated with a practical session on the basics of Networking,
+followed by a very informative theory lesson.</p>
+<h6 className="tr white">*click to flip*</h6>
+      </div>
+    </FrontSide>
+    <BackSide style={{backgroundColor: '#f5593d'}}
+      className="card ml-auto mr-auto">
+<div>      
+<strong><h4 className="title tc mx-auto">Workshop</h4></strong>
+<img 
+  src={require("assets/img/images.jpg")}
+  alt="..."></img>
+  <p className="tl white">We.connect and IEEE USICT conducted the Alexa Workshop
+   on 5th March 2020.The Workshop was attended by many students who were filled
+    with vigour and enthusiasm and also their 
+active participation helped in making this event successful!</p>
+</div>
+    </BackSide>
+  </Flippy>
+                              
             </Col>
           </Row>
+          <h2 className="tc white washed-blue ml-auto mr-auto text-center title"
+        md="8">...And More!</h2>
         </Container>
+        
+
       </div>{" "}
     </>
   );

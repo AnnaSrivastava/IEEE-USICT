@@ -1,10 +1,10 @@
 import React from "react";
 
 // reactstrap components
-import { Button, Card, Form, Input, Container, Row, Col } from "reactstrap";
+import { Button, Card,  Container, Row, Col } from "reactstrap";
 
 // core components
-import ExamplesNavbar from "components/Navbars/ExamplesNavbar.js";
+// import ExamplesNavbar from "components/Navbars/ExamplesNavbar.js";
 
 function RegisterPage() {
   document.documentElement.classList.remove("nav-open");
@@ -16,7 +16,7 @@ function RegisterPage() {
   });
   return (
     <>
-      <ExamplesNavbar />
+      {/* <ExamplesNavbar /> */}
       <div
         className="page-header"
         style={{
@@ -28,7 +28,7 @@ function RegisterPage() {
           <Row>
             <Col className="ml-auto mr-auto" lg="4">
               <Card className="card-register ml-auto mr-auto">
-                <h3 className="title mx-auto">Welcome</h3>
+                {/* <h3 className="title mx-auto">Welcome</h3> */}
                 <div className="social-line text-center">
                   <Button
                     className="btn-neutral btn-just-icon mr-1"
@@ -40,22 +40,22 @@ function RegisterPage() {
                   </Button>
                   <Button
                     className="btn-neutral btn-just-icon mr-1"
-                    color="google"
+                    color="linkedin"
                     href="#pablo"
                     onClick={e => e.preventDefault()}
                   >
-                    <i className="fa fa-google-plus" />
+                    <i className="fa fa-linkedin" />
                   </Button>
                   <Button
                     className="btn-neutral btn-just-icon"
-                    color="twitter"
+                    color="instagram"
                     href="#pablo"
                     onClick={e => e.preventDefault()}
                   >
-                    <i className="fa fa-twitter" />
+                    <i className="fa fa-instagram" />
                   </Button>
                 </div>
-                <Form className="register-form">
+                {/* <Form className="register-form">
                   <label>Email</label>
                   <Input placeholder="Email" type="text" />
                   <label>Password</label>
@@ -63,8 +63,8 @@ function RegisterPage() {
                   <Button block className="btn-round" color="danger">
                     Register
                   </Button>
-                </Form>
-                <div className="forgot">
+                </Form> */}
+                {/* <div className="forgot">
                   <Button
                     className="btn-link"
                     color="danger"
@@ -73,17 +73,17 @@ function RegisterPage() {
                   >
                     Forgot password?
                   </Button>
-                </div>
+                </div> */}
               </Card>
             </Col>
           </Row>
         </Container>
-        <div className="footer register-footer text-center">
+        {/* <div className="footer register-footer text-center">
           <h6>
             © {new Date().getFullYear()}, made with{" "}
             <i className="fa fa-heart heart" /> by Creative Tim
           </h6>
-        </div>
+        </div> */}
       </div>
     </>
   );
