@@ -5,7 +5,7 @@
   "dependencies": {
     "classnames": "2.2.6",
     "moment": "2.24.0",
-    "node-sass": "^4.13.1",
+    "node-sass": "^7.0.0",
     "nouislider": "13.1.5",
     "particlesjs": "^2.2.3",
     "react": "16.8.6",
